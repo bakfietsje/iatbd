@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    padding: 4rem;
+    background: #222831;
+    font-family: sans-serif;
+}
+
+.productCard{
+    width: 50vw;
+    height: 90vh;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+}
+
+
+
+
+.productCard::after{
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(7, 104, 159, 1);
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.productCard__figure{
+    width: 100%;
+    height: 60%;
+}
+
+.productCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productCard__text
+    {
+    padding-left: 2rem;
+    color: #eeeeee;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.productCard__btnSection{
+    height: 20%;
+    padding-left: 2rem;
+    display: list-item;
+    list-style-type: none;
+}
+
+.productCard__button{
+    font-size: 120%;
+    width: 25rem;
+    height: 8rem;
+    box-sizing: border-box;
+    background: #07689f;
+    border: none;
+    color: #eeeeee;
+    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.7);
+    transition: 0.2s all;
+}
+
+.productCard__button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.9);
+}
+
+.productCard_back_to_home{
+    display: block;
+    margin-top: 1rem;
+    color: white;
+}
+
+.GridCard{
+    grid-column: span 4;
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+
+.ReviewCard{
+    grid-column: span 4;
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+
+
+.GridCard > a{
+    text-decoration: none;
+}
+
+
+.GridCard > a > article{
+    width: 100%;
+    height: 100%;
+}
+
+.GridCard > article{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.GridCard__header{
+    width: 100%;
+    height: 20%;
+    background: rgba(7, 104, 159, 0.7);
+}
+
+.GridCard__heading{
+    padding-left: 2rem;
+    color: #eeeeee;
+}
+
+.GridCard__figure{
+    width: 100%;
+    height: 60%;
+}
+
+.GridCard__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.GridCard__textSection{
+    width: 100%;
+    height: 30%;
+    background: black;
+}
+
+.GridCard__text{
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-bottom: 0.1rem;
+    color: grey;
+}
+/* style for kind of product */
+
+.GridCard::after{
+    content:"";
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.GridCard[data-kind-of-product="Maki"]::after{
+    background: blue; 
+}
+
+.GridCard[data-kind-of-product="maki"]::after{
+    background: blue; 
+}
+
+.GridCard[data-kind-of-product="Nigiri"]::after{
+    background: pink; 
+}
+
+.GridCard[data-kind-of-product="Shashimi"]::after{
+    background: #f67280; 
+}
+
+.GridCard[data-kind-of-product="Temaki"]::after{
+    background: #FF5722; 
+}
+
+.GridCard[data-kind-of-product="Uramaki"]::after{
+    background: green; 
+}
+
+.create-form{
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.9);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #eeeeee;
+    gap: 2rem;
+}
+
+.create-form__form{
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 2rem;
+}
+
+.create-form__section{
+    margin-top: 2rem;
+    font-size: 110%;
+    width: 100%;
+}
+
+.create-form__input{
+    display: block;
+    margin-top: 0.5rem;
+    width: 60%;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.create-form__input--big{
+    height: 20rem;
+}
+
+.create-form__button{
+    font-size: 120%;
+    width: 25rem;
+    height: 8rem;
+    box-sizing: border-box;
+    background: #07689f;
+    border: none;
+    color: #eeeeee;
+    box-shadow: 0 0 5rem rgba(7, 104, 159, 0.7);
+    transition: 0.2s all;
+    margin-bottom: 2rem;
+}
+
+
+/* utility classes */
+
+.u-list-style-none{
+    list-style: none;
+}
+
+.u-grid-12{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+}
+
+.u-grid-gap-2{
+    gap: 2rem;
+}
+
+.u-flex-v-center{
+    display: flex;
+    align-items: center;
+}
+
+/* animations */
+.a-popup{
+    animation-name: popup;
+    animation-duration: 0.6s;
+    animation-fill-mode: backwards;
+}
+
+.a-popup:nth-of-type(2n){
+    animation-delay: 0.2s;
+}
+
+@keyframes popup{
+   0%{
+       transform: scale(1.1);
+       opacity: 0;
+   }
+   70%{
+       transform: scale(1);
+   }
+   100%{
+       opacity: 1;
+   }
+}
+
+/* zoekbuttons en shit */
+
+label{
+    color: white;
+}
+
+
+.profile__name{
+    color: red;
+}
+
+.profile__producten{
+    color: white;
+}
+
+nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  #myUL{
+      display: none;
+  }
+
+  #customers th {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    text-align: left;
+    background-color: #4CAF50;
+    color: black;
+  }
+
+  #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 0.1rem solid #ddd;
+    padding: 0.8rem;
+  }
+
+  .profile__intro{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      color: white;
+  }
+
+  .profile__loguit{
+      color: blue;
+  }
+  
+
+
+
+  @media(max-width: 37.5rem){
+    .productCard{
+        width: 35rem;
+    }
+
+    .checkbtn{
+        display: block;
+      }
+      .ul-ul{
+        position: fixed;
+        width: 85.7%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 15vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 100;
+      }
+      nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+      nav ul li a{
+        font-size: 20px;
+      }
+      a:hover,a.active{
+        background: none;
+        color: #0082e6;
+      }
+      #check:checked ~ ul{
+        left: 40px;
+      }
+    }
+
+@media(max-width: 25rem){
+    .productCard_button{
+        width: 15rem;
+        height: 6rem;
+    }
+    
+}
+
+@media(max-width: 56.25rem){
+    .GridCard{
+        grid-column: span 6;
+    }
+
+    .create-form__input{
+        width: 100%;
+    }
+
+    .create-form__button{
+        margin-top: 3rem;
+    }
+
+    .create-form__section{
+        margin-left: 5%;
+    }
+
+    .productCard__image{
+        margin-top: 5rem;
+        margin-left: 5%;
+        margin-bottom: 3rem;
+    }
+
+    .create-form__form{
+        max-width: 80%;
+    }
+
+    .productCard__btnSection{
+        margin-top: 3rem;
+
+    }
+    
+    .GridCard__text{
+        margin-top: -0.5rem;
+    }
+
+
+
+    .checkbtn{
+        display: block;
+      }
+      .ul-ul{
+        position: fixed;
+        width: 85%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 15vh;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 100;
+      }
+      nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+      nav ul li a{
+        font-size: 20px;
+      }
+      a:hover,a.active{
+        background: none;
+        color: #0082e6;
+      }
+      #check:checked ~ ul{
+        left: 40px;
+      }
+}
+
+@media(max-width: 32.5rem){
+    .GridCard{
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 62.5rem){
+    .create-form{
+
+        width: 70%;
+    }
+   
+}
+
