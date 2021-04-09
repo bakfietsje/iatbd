@@ -21,10 +21,10 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => "Horse",
-            'email' => "horse@horse.nl",
+            'name' => "Gebruiker",
+            'email' => "email@email.nl",
             'password' => bcrypt('laravel'),
-            'role' => 'Admin',
+            'role' => 'Gast',
         ]);
     }
 }

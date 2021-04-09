@@ -14,15 +14,15 @@ class ReviewTableSeeder extends Seeder
     public function run()
     {
         DB::table('review')->insert([
-            'User' => "Horse",
-            'Inhoud' => "Kk goeie product ouwe",
-            'Poster' => "Iemand anders",
+            'User' => "Mees",
+            'Inhoud' => "Matig product!",
+            'Poster' => "Henk",
         ]);
         
         DB::table('review')->insert([
-            'User' => "s1122328",
-            'Inhoud' => "Kk goeie product ouwe",
-            'Poster' => "Iemand anders",
+            'User' => "Diederik",
+            'Inhoud' => "Super fijn product, bedankt",
+            'Poster' => "Gerrit",
         ]);
     }
 }
